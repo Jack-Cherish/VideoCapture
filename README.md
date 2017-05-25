@@ -7,5 +7,5 @@
 
 * capture.cpp:
 
-	原理说明：
+	原理说明：http://blog.csdn.net/c406495762/article/details/72732135
 

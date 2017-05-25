@@ -323,7 +323,7 @@ void VideoPlayer() {
 		cvmat = cvMat(IMAGEHEIGHT,IMAGEWIDTH,CV_8UC3,(void*)yuv422frame);		//CV_8UC3
 
 		//解码
-		img = cvDecodeImage(&cvmat,0);
+		img = cvDecodeImage(&cvmat,1);
 		if(!img){
 			printf("DecodeImage error!\n");
 		}

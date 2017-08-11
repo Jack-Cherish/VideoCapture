@@ -300,7 +300,7 @@ void V4L2Capture::test() {
 	vcap->openDevice();
 	vcap->initDevice();
 	vcap->startCapture();
-	vcap->getFrame((void **) &yuv422frame, &yuvframeSize);
+	vcap->getFrame((void **) &yuv422frame, (size_t *)&yuvframeSize);
 
 	vcap->backFrame();
 	vcap->freeBuffers();
@@ -323,7 +323,7 @@ void VideoPlayer() {
 	double t;
 	while(1){
 		t = (double)cvGetTickCount();
-		vcap->getFrame((void **) &yuv422frame, &yuvframeSize);
+		vcap->getFrame((void **) &yuv422frame, (size_t *)&yuvframeSize);
 		cvmat = cvMat(IMAGEHEIGHT,IMAGEWIDTH,CV_8UC3,(void*)yuv422frame);		//CV_8UC3
 
 		//解码

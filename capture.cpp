@@ -42,7 +42,6 @@ public:
 	int freeBuffers();
 	int getFrame(void **,size_t *);
 	int backFrame();
-
 	static void test();
 
 private:
